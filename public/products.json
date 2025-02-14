@@ -1,0 +1,112 @@
+[
+    {
+      "product_id": "L001",
+      "product_title": "Dell XPS 15",
+      "product_image": "https://i.ibb.co.com/XZcTFBjv/luca-bravo-9l-326-FISzk-unsplash.jpg",
+      "category": "Laptop",
+      "price": 1500,
+      "description": "A high-performance laptop with a 15-inch display.",
+      "Specification": { "RAM": "16GB", "Storage": "512GB SSD", "Processor": "Intel i7" },
+      "availability": "In Stock",
+      "rating": 4.8
+    },
+    {
+      "product_id": "L002",
+      "product_title": "MacBook Pro 14",
+      "product_image": "https://i.ibb.co.com/MxPnp40D/kari-shea-1-SAnr-Ixw5-OY-unsplash.jpg",
+      "category": "Laptop",
+      "price": 2000,
+      "description": "Apple's powerful laptop with M2 chip.",
+      "Specification": { "RAM": "16GB", "Storage": "1TB SSD", "Processor": "Apple M2" },
+      "availability": "In Stock",
+      "rating": 4.9
+    },
+    {
+      "product_id": "L003",
+      "product_title": "HP Spectre x360",
+      "product_image": "https://i.ibb.co.com/2YhmDjM8/glenn-carstens-peters-npx-XWg-Q33-ZQ-unsplash.jpg",
+      "category": "Laptop",
+      "price": 1400,
+      "description": "A convertible laptop with touchscreen display.",
+      "Specification": { "RAM": "16GB", "Storage": "512GB SSD", "Processor": "Intel i7" },
+      "availability": "In Stock",
+      "rating": 4.7
+    },
+    {
+      "product_id": "L004",
+      "product_title": "Lenovo ThinkPad X1",
+      "product_image": "https://i.ibb.co.com/TDkRhZKb/crew-4-Hg8-LH9-Hoxc-unsplash.jpg",
+      "category": "Laptop",
+      "price": 1600,
+      "description": "A business laptop with high durability.",
+      "Specification": { "RAM": "16GB", "Storage": "512GB SSD", "Processor": "Intel i7" },
+      "availability": "In Stock",
+      "rating": 4.6
+    },
+    {
+      "product_id": "P001",
+      "product_title": "iPhone 14 Pro",
+      "product_image": "https://i.ibb.co.com/svWVG4K6/coinview-app-h7a6g0ua6-LM-unsplash.jpg",
+      "category": "Phone",
+      "price": 1200,
+      "description": "Apple's latest smartphone with an advanced camera system.",
+      "Specification": { "RAM": "6GB", "Storage": "256GB", "Processor": "A16 Bionic" },
+      "availability": "In Stock",
+      "rating": 4.9
+    },
+    {
+      "product_id": "P002",
+      "product_title": "Samsung Galaxy S23",
+      "product_image": "https://i.ibb.co.com/8Dz36NMK/lacie-slezak-e-Jsh9-LKn-X-A-unsplash.jpg",
+      "category": "Phone",
+      "price": 1000,
+      "description": "Samsung's flagship phone with powerful features.",
+      "Specification": { "RAM": "8GB", "Storage": "256GB", "Processor": "Snapdragon 8 Gen 2" },
+      "availability": "In Stock",
+      "rating": 4.8
+    },
+    {
+      "product_id": "W001",
+      "product_title": "Apple Watch Series 8",
+      "product_image": "https://i.ibb.co.com/67wphYx6/the-nix-company-oo-PXb-J22-UIk-unsplash.jpg",
+      "category": "Watch",
+      "price": 500,
+      "description": "A smartwatch with advanced health tracking.",
+      "Specification": { "Display": "1.9-inch Retina", "Battery Life": "18 hours" },
+      "availability": "In Stock",
+      "rating": 4.8
+    },
+    {
+      "product_id": "W002",
+      "product_title": "Samsung Galaxy Watch 5",
+      "product_image": "https://i.ibb.co.com/HfGQLkr1/brigitte-tohm-j8-C66j15n-Ak-unsplash.jpg",
+      "category": "Watch",
+      "price": 400,
+      "description": "A smartwatch with fitness tracking and AMOLED display.",
+      "Specification": { "Display": "1.4-inch AMOLED", "Battery Life": "24 hours" },
+      "availability": "In Stock",
+      "rating": 4.7
+    },
+    {
+      "product_id": "A001",
+      "product_title": "Sony WH-1000XM5",
+      "product_image": "https://i.ibb.co.com/HTp242gf/nassim-boughazi-4fr-Ket-PJss-unsplash.jpg",
+      "category": "Accessory",
+      "price": 350,
+      "description": "High-end noise-canceling wireless headphones.",
+      "Specification": { "Battery Life": "30 hours", "Connectivity": "Bluetooth 5.2" },
+      "availability": "In Stock",
+      "rating": 4.9
+    },
+    {
+      "product_id": "A002",
+      "product_title": "AirPods Pro 2",
+      "product_image": "https://i.ibb.co.com/PZr8wjPm/mobina-ghazazani-lnbuo-Kz2-Gl-M-unsplash.jpg",
+      "category": "Accessory",
+      "price": 250,
+      "description": "Apple's premium wireless earbuds with noise cancellation.",
+      "Specification": { "Battery Life": "6 hours", "Connectivity": "Bluetooth 5.3" },
+      "availability": "In Stock",
+      "rating": 4.8
+    }
+  ]
