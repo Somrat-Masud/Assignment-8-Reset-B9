@@ -4,27 +4,40 @@ import { CiHeart } from "react-icons/ci";
 import { TiShoppingCart } from "react-icons/ti";
 import { addDataCart, addDataFavorite } from "../utilies";
 const ProductCardDetails = () => {
-  const [isfavorites, setisFavorites] = useState(true);
+  const [isfavorites, setIsFavorites] = useState(true);
   const data = useLoaderData();
   const { id } = useParams();
+  console.log(id);
   const [card, setCard] = useState({});
 
   useEffect(() => {
-    const productDataSingle = data.find((item) => item.product_id === id);
+    const productDataSingle = data.find(
+      (item) => String(item.product_id) === String(id)
+    );
+    console.log(productDataSingle);
     setCard(productDataSingle);
   }, [data, id]);
-  document.title = `${card.product_title} Gadget Heaven`;
+
+  useEffect(() => {
+    if (card) {
+      document.title = `${card.product_title} | Gadget Heaven`;
+    }
+  }, [card]);
 
   if (!card) {
     return <p>Loading...</p>;
   }
+
   const handleCart = (card) => {
+    console.log(card);
     addDataCart(card);
   };
 
   const handleFavorite = (card) => {
+    console.log(card);
     addDataFavorite(card);
   };
+  console.log(card);
 
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl  w-9/12 mx-auto">
@@ -41,14 +54,16 @@ const ProductCardDetails = () => {
           <p>{card.rating}</p>
           <div className="items-center space-x-3">
             <button
-              onClick={() => handleCart()}
+              onClick={() => handleCart(card.product_id)}
+              // onClick={handleCart}
               className="btn btn-primary text-xl"
             >
               Add To Card
               <TiShoppingCart />
             </button>
             <p
-              onClick={() => handleFavorite()}
+              onClick={() => handleFavorite(card)}
+              // onClick={handleFavorite}
               className="text-2xl font-bold btn rounded-full "
             >
               <CiHeart />{" "}

@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 // get all Data cart products from local storage
 const getDataAllCarts = () => {
   const all = localStorage.getItem("carts");
-  const carts = JSON.parse(all);
+  //   const carts = JSON.parse(all);
   if (all) {
     const carts = JSON.parse(all);
     return carts;
@@ -14,20 +14,26 @@ const getDataAllCarts = () => {
 //add Data cart products to local storage
 const addDataCart = (card) => {
   const carts = getDataAllCarts();
-  const isExist = carts.find((item) => item.product_id === card.product_id);
+  // const isExist = carts.find((item) => item.product_id === card.product_id);
+  // console.log(isExist);
 
-  if (isExist)
-    return toast.info("Product Already Exist", {
-      autoClose: 1000,
-      hideProgressBar: true,
-    });
-  carts.push(card);
-  localStorage.setItem("carts", JSON.stringify(carts));
-  toast.success("Product Added Successfully", {
-    position: "top-center",
-    autoClose: 1000,
-    hideProgressBar: true,
-  });
+  // if (isExist)
+  //   return toast.info("Product Already Exist", {
+  //     autoClose: 1000,
+  //     hideProgressBar: true,
+  //   });
+  if (!carts.includes(card)) {
+    carts.push(card);
+
+    localStorage.setItem("carts", JSON.stringify(carts));
+  }
+
+  // toast.success("Product Added Successfully", {
+  //   position: "top-center",
+  //   autoClose: 1000,
+  //   hideProgressBar: true,
+  // }
+  // );
 };
 const removeDataCart = (id) => {
   const carts = getDataAllCarts();
@@ -38,7 +44,7 @@ const removeDataCart = (id) => {
 //  get all Data favorite products from local storage
 const getAllDataFavorites = () => {
   const all = localStorage.getItem("favorites");
-  const favorites = JSON.parse(all);
+  //   const favorites = JSON.parse(all);
   if (all) {
     const favorites = JSON.parse(all);
     return favorites;
