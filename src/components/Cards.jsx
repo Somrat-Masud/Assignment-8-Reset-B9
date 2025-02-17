@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-const Cards = ({ coffee }) => {
-  const { product_title, product_image } = coffee || {};
+const Cards = ({ product }) => {
+  const { product_title, product_image } = product || {};
   return (
     <div>
       <Link

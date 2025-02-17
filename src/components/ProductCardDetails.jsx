@@ -62,7 +62,7 @@ const ProductCardDetails = () => {
               <TiShoppingCart />
             </button>
             <p
-              onClick={() => handleFavorite(card)}
+              onClick={() => handleFavorite(card.product_id)}
               // onClick={handleFavorite}
               className="text-2xl font-bold btn rounded-full "
             >

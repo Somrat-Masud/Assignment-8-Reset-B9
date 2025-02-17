@@ -4,7 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
   return (
-    <div className="rounded-xl bg-[#9538E2]  h-[450px]">
+    <div className="rounded-xl bg-[#9538E2]  ">
       <div className="navbar   mt-2  ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -53,18 +53,6 @@ const Navbar = () => {
             <CiHeart />
           </span>
         </div>
-      </div>
-      <div className=" text-center text-white space-y-2">
-        <h4 className=" font-bold text-4xl w-2/4 mx-auto ">
-          Upgrade Your Tech Accessorize with Gadget Heaven Accessories
-        </h4>
-        <p className="w-3/5 mx-auto text-xl mt-6 ">
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to the coolest accessories, we have it all!
-        </p>
-        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-4xl m-4">
-          Shop Now
-        </button>
       </div>
     </div>
   );

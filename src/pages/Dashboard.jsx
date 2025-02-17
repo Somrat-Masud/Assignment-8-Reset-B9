@@ -10,12 +10,15 @@ import {
   removeDataFavorite,
 } from "../utilies";
 import Favorite from "../components/Favorite";
-import Card from "../components/Card";
+// import Card from "../components/Card";
+import Cards from "../components/Cards";
 
 const Dashboard = () => {
   const [cartProducts, setCartProducts] = useState([]);
+  const [favoritesProducts, setFavoritesProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
   const [products, setProducts] = useState([]);
+
   const [isActive, setIsActive] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   console.log(cartProducts);
@@ -42,6 +45,18 @@ const Dashboard = () => {
     setCartProducts(products);
     // setCartProducts(storageCarts);
   }, [allProducts]);
+  //Favorite useEffect
+  useEffect(() => {
+    const storageCarts = getAllDataFavorites();
+    console.log(storageCarts);
+    const cartsId = storageCarts.map((id) => id);
+    console.log(typeof cartsId);
+    const products = allProducts.filter((product) =>
+      cartsId.includes(product.product_id)
+    );
+    console.log("products", products);
+    setFavoritesProducts(products);
+  }, [allProducts]);
 
   const handleCartRemove = (id) => {
     removeDataCart(id);
@@ -53,11 +68,6 @@ const Dashboard = () => {
       hideProgressBar: true,
     });
   };
-
-  useEffect(() => {
-    const favorites = getAllDataFavorites();
-    setProducts(favorites);
-  }, []);
 
   const handleFavRemove = (id) => {
     removeDataFavorite(id);
@@ -178,16 +188,16 @@ const Dashboard = () => {
         {isActive ? (
           <div className="rounded-3x w-10/12 mx-auto">
             {cartProducts.map((product) => (
-              <Card
+              <Cards
                 handleCartRemove={handleCartRemove}
                 key={product.product_id}
                 product={product}
-              ></Card>
+              ></Cards>
             ))}
           </div>
         ) : (
           <div className="rounded-3x w-10/12 mx-auto">
-            {products.map((product) => (
+            {favoritesProducts.map((product) => (
               <Favorite
                 handleFavRemove={handleFavRemove}
                 key={product.product_id}

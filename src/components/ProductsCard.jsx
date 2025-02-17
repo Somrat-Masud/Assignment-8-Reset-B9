@@ -22,10 +22,16 @@ const ProductsCard = () => {
   }, [category, data]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
-      {Items.map((card) => (
-        <Card key={card.product_id} card={card}></Card>
-      ))}
+    <div className="">
+      {Items.length === 0 ? (
+        <p>No Data Found</p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+          {Items.map((card) => (
+            <Card key={card.product_id} card={card}></Card>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
