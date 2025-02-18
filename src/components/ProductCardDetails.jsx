@@ -16,6 +16,9 @@ const ProductCardDetails = () => {
     console.log(productDataSingle);
     setCard(productDataSingle);
   }, [data, id]);
+
+//git add
+
   useEffect(() => {
     if (card) {
       document.title = `${card.product_title} | Gadget Heaven`;
