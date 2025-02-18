@@ -14,12 +14,14 @@ const Card = ({ card }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{product_title}</h2>
-        <p>Price:{price}</p>
-        <div className="card-actions">
+        <div className="items-start">
+          <h2 className="card-title text-2xl">{product_title}</h2>
+          <p className="text-xl">Price:{price}</p>
+        </div>
+        <div className="card-actions justify-center items-center mt-2">
           <NavLink to={`/product/${card.product_id}`}>
             {" "}
-            <button className="btn btn-primary"> Details</button>
+            <button className="btn btn-primary text-center">Details</button>
           </NavLink>
         </div>
       </div>

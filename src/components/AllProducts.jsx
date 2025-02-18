@@ -12,11 +12,11 @@ const AllProducts = ({ category }) => {
             to={`/category/${category.category}`}
             role="tab"
             className={({ isActive }) =>
-              ` sm:w-9/12 md:w-10/12 lg:w-full px-4 py-2 text-sm sm:text-base md:text-lg text-center font-medium rounded-full shadow-md transition-all 
+              ` sm:w-9/12 md:w-10/12 lg:w-full px-4 py-2 text-sm sm:text-base md:text-lg text-center font-medium rounded-full shadow-md 
             ${
               isActive
-                ? "bg-[#9538E2] text-white border border-[#12775c] shadow-lg"
-                : "bg-white text-gray-700 hover:bg-[#9538E2]"
+                ? "bg-[#9538E2] text-white border shadow-lg"
+                : "bg-white text-gray-700 "
             }`
             }
           >

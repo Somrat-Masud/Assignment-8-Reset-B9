@@ -29,11 +29,6 @@ const addDataCart = (card) => {
     hideProgressBar: true,
   });
 };
-const removeDataCart = (id) => {
-  const carts = getDataAllCarts();
-  const remaining = carts.filter((card) => card.product_id != id);
-  localStorage.setItem("carts", JSON.stringify(remaining));
-};
 
 //  get all Data favorite products from local storage
 const getAllDataFavorites = () => {
@@ -67,6 +62,12 @@ const addDataFavorite = (card) => {
 };
 
 // remove Data favorite products from local storage
+const removeDataCart = (id) => {
+  const carts = getDataAllCarts();
+  const remaining = carts.filter((card) => card.product_id != id);
+  localStorage.setItem("carts", JSON.stringify(remaining));
+};
+
 const removeDataFavorite = (id) => {
   const favorites = getAllDataFavorites();
   const remaining = favorites.filter((card) => card.product_id != id);

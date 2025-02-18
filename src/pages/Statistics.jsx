@@ -1,7 +1,9 @@
+import StatisticsBanner from "../components/StatisticsBanner";
+
 const Statistics = () => {
   return (
     <div>
-      <h1>Statistics Section</h1>
+      <StatisticsBanner></StatisticsBanner>
     </div>
   );
 };

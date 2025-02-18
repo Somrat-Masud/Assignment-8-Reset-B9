@@ -24,7 +24,9 @@ const ProductsCard = () => {
   return (
     <div className="">
       {Items.length === 0 ? (
-        <p>No Data Found</p>
+        <p className="text-2xl font-extrabold text-center mt-50 text-[#9538E2] ">
+          No Data Found
+        </p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
           {Items.map((card) => (

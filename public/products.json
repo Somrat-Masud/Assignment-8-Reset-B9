@@ -6,7 +6,7 @@
       "category": "Laptop",
       "price": 1500,
       "description": "A high-performance laptop with a 15-inch display.",
-      "Specification": { "RAM": "16GB", "Storage": "512GB SSD", "Processor": "Intel i7" },
+      "specification": { "RAM": "16GB", "Storage": "512GB SSD", "Processor": "Intel i7" },
       "availability": "In Stock",
       "rating": 4.8
     },
